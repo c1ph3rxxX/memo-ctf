@@ -11,32 +11,26 @@
     <header>
     <p>p tag <a href=javascript:alert()>click</a></p>
     </header>
-    <script>alert(document.domain)</script>
-    <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png onmouseover=alert(document.cookie)>
+    <script>alert(document.location)</script>
+    <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png>
     <!-- Place the script directly in the body -->
 
 </body>
 </html>
  <script>
 
-        function insertDivIntoIframe(iframeId) {
 
-            const iframe = document.getElementById(iframeId);
-
-
-            const iframeDoc = iframe.contentDocument //|| iframe.contentWindow.document;
+            const iframe = document.getElementById('yDmH0d');
 
 
-            const newDiv = iframeDoc.createElement('script');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+
+            const newDiv = iframeDoc.createElement('div');
             newDiv.className = 'inserted-div';
-            newDiv.innerHTML = 'alert(document.location)';
+            newDiv.innerHTML = 'iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiinnnnnnnnnnnnnnseeeeerttttttttttttttttttttttttttttttttt';
 
 
             iframeDoc.body.appendChild(newDiv);
-        }
 
-
-        window.onload = function() {
-            insertDivIntoIframe('yDmH0d');
-        };
     </script>
