@@ -13,10 +13,31 @@
     </header>
     <script>alert(document.domain)</script>
     <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png onmouseover=alert(document.cookie)>
-        
+    <iframe id="id1" src="https://glassdoor.com" width="1000" height="500"></iframe>
     <!-- Place the script directly in the body -->
-   <h4>
-       
-   </h4>
+
 </body>
 </html>
+ <script>
+
+        function insertDivIntoIframe(iframeId) {
+
+            const iframe = document.getElementById(iframeId);
+
+
+            const iframeDoc = iframe.contentDocument //|| iframe.contentWindow.document;
+
+
+            const newDiv = iframeDoc.createElement('script');
+            newDiv.className = 'inserted-div';
+            newDiv.innerHTML = 'alert(document.location)';
+
+
+            iframeDoc.body.appendChild(newDiv);
+        }
+
+
+        window.onload = function() {
+            insertDivIntoIframe('id1');
+        };
+    </script>
