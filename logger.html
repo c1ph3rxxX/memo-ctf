@@ -19,18 +19,18 @@
 </html>
  <script>
 
+        function insertDivIntoIframe(iframeId) {
+            const iframe = document.getElementById(iframeId);
+            const iframeDoc = iframe.contentDocument //|| iframe.contentWindow.document;
 
-            const iframe = document.getElementById('yDmH0d');
-
-
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-
-            const newDiv = iframeDoc.createElement('div');
-            newDiv.className = 'inserted-div';
-            newDiv.innerHTML = 'iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiinnnnnnnnnnnnnnseeeeerttttttttttttttttttttttttttttttttt';
-
+            const newDiv = iframeDoc.createElement('script');
+            // newDiv.className = 'inserted-div';
+            newDiv.innerHTML = 'alert(document.domain)';
 
             iframeDoc.body.appendChild(newDiv);
+        }
 
+        window.onload = function() {
+            insertDivIntoIframe('gt-nvframe');
+        };
     </script>
